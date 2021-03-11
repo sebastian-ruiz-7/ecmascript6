@@ -84,3 +84,58 @@ const a='b';
 //a='c'; //This brings an error because const can't be reassigned
 console.log(a);
 
+
+
+//HERE BEGINS CLASS 3
+//This is an example of enhanced object property
+let name='Sebastián';
+let age=21;
+
+//Before ES6 create an object with data above was like
+obj = {name:name,age:age};
+
+//But with ES6 this can be done by
+objES6={name,age};
+
+console.log(obj);
+console.log(objES6);
+
+
+//Arrows functions
+//The arrow functios are anonymous
+const names=[
+    {name:'Sebastián', age: 21},
+    {name:'Mario',     age: 56}
+];
+
+let listOfNames= names.map(function(item){
+    console.log(item.name);
+})
+
+let listOfNamesArrow=names.map(item=>console.log(item.name));
+
+//To put a name to an arrow function normally it does with const
+const listOfNamesArrow_name=(name,age,country)=>{
+   console.log(names.map())
+}
+
+
+//Use of promise. Promise are use with asynchronism of JS. There are useful to resolve the callback hell problem.
+//A promise represent a value that can be available now, in the future or never.
+
+const helloPromise = ()=>{
+    return new Promise((resolve,reject)=>{
+        if(true){
+            resolve('Hey!');
+        } else{
+            reject('Ups!');
+        }
+    })
+}
+
+helloPromise() //We executed this way
+    .then(response=>console.log(response))
+    .then(()=>console.log('Hola'))
+    .catch(error=>console.log(error));
+
+
