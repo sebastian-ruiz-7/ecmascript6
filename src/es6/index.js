@@ -139,3 +139,54 @@ helloPromise() //We executed this way
     .catch(error=>console.log(error));
 
 
+
+//HERE BEGINS CLASS 4
+
+class calculator{
+    constructor(){ //This line means that when a calculator is created automatically fills with this properties
+        this.valueA=0;
+        this.valueB=0;
+    }
+    sum(valueA,valueB){//We are agregating the sum method. Now we can pass the values a and b as parameters
+        this.valueA=valueA;
+        this.valueB=valueB;
+        return this.valueA +this.valueB;
+    }
+}
+
+const sumar=new calculator();
+console.log(sumar.sum(3,4));
+
+
+
+//Import and export. This is work with modules. 
+//With modules we can have the logic part of the programming in another file, insted having everithing in just one
+
+import hello from './modules';
+
+console.log(hello());
+
+
+//Another point added in ES6 is generators. 
+//They are a special function that returns a several values according to the defined algorithm.
+
+function * helloWorld (){
+    if(true){
+        yield 'Hello';
+    }
+    if(true){
+        yield 'World';
+    }
+};
+//ESPAÑOL PARA EXPLICARME MEJOR: Lo interesante de esta función es que se va ejecutando conforme vaya siendo ejecutada
+
+
+
+
+const generatorHello=helloWorld();
+console.log(generatorHello.next().value);  //Por ejemplo: De acuerdo con el código de arriba, la primera vez que se ejecute esta función se retornará el valor del primer if
+console.log(generatorHello.next().value);  //La función recuerda hasta donde fue ejecutada y la siguiente vez que se ejecute lo hara con el siguiente if
+console.log(generatorHello.next().value);  //Por último, como solo hay 2 if, si se ejecuta por tercera vez. //Retorna un undefined porque no se le ha especificado a la función que hacer en caso de ejecutarse por tercera ocasión
+
+
+
