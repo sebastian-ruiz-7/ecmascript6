@@ -30,3 +30,11 @@ let numbers=[1,2,3,7,8];
  }else{
     console.log('Te la persignaste krnal :(');
  }
+
+
+ //A new way to calculate exponential numbers
+
+ let base=4;
+ let exponent=3;
+ let result= base**exponent;
+ console.log(result);
