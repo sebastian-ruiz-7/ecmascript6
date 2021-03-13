@@ -18,7 +18,7 @@ console.log(entries[0][0]); //Print only the element of the matrix
 console.log(entries[0].length); //Returns the numbers of elements
 //2
 
-//Object values
+//Object.values
 //Returns the values of an object in an array
 const data ={
     fronten:'Sebastián',
