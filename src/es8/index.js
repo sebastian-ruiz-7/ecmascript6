@@ -41,3 +41,35 @@ console.log(string.padStart(8,'hi ')); //The first parameter is the max number o
 console.log(string.padEnd(11,' world')); //Add the characther at the end of the original string
 //OUTPUT: 'hello world'
 
+
+//Begins the class 8
+
+//async-await
+const helloWorld=()=>{
+    return new Promise((resolve,reject)=>{
+        (false)
+            ? setTimeout(()=>resolve('Hello World'),3000)
+            : reject(new Error('Test Error'))
+    })
+};
+
+const helloAsync= async ()=>{
+    const hello = await helloWorld();
+    try{
+    console.log(hello);
+    } catch(e){
+    console.log(e.message())    
+    }
+}
+
+//helloAsync();
+
+const anotherfuction = async ()=>{
+    try{
+        const hello= await helloWorld();
+        console.log(hello);
+    } catch(error){
+        console.log(error);
+    }
+}
+anotherfuction();
